@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-// import logo from './logo.svg';
 import './App.css';
+import Calendar from 'react-calendar';
+
 
 
 function App() {
 
   const [owners, setOwners] = useState([])
   const [properties, setProperties] = useState([])
+  const [posts, setPosts] = useState([])
 
   async function getData(){
 
@@ -22,6 +24,10 @@ function App() {
     await fetch(new URL("properties", process.env.REACT_APP_SERVER_URL), fetchInit)
     .then(response => response.json())
     .then(response => setProperties(response));
+
+    await fetch(new URL("posts", process.env.REACT_APP_SERVER_URL), fetchInit)
+    .then(response => response.json())
+    .then(response => setPosts(response));
   }
 
   useEffect(()=>{
@@ -31,12 +37,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <ul type="square">
+        {/* <ul type="square">
           {owners.map((owner) => <li key={owner.id}>{owner.name} : {owner.email}</li>)}
+        </ul> */}
+        <ul type="square">
+          {properties.map((property) => 
+            <li key={property.id}>
+              {property.type} : {property.address_full} : 
+                <img src={property.header_img} alt=" " width="20%"></img>
+                <Calendar className="calender" />
+            </li>)}
         </ul>
         <ul type="square">
-          {properties.map((property) => <li key={property.id}>{property.type} : {property.address_full} : <img src={property.header_img} alt=" " width="20%"></img></li>)}
+          {posts.map((post) => <li key={post.id}>{post.title} : {post.content}</li>)}
         </ul>
       </header>
     </div>
