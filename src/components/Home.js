@@ -16,6 +16,7 @@ function Home(props){
             {/* <h2>ログイン状態: {props.loggedInStatus}</h2> */}
             <Registration handleSuccessfulAuthentication={handleSuccessfulAuthentication}/>
             <Login handleSuccessfulAuthentication={handleSuccessfulAuthentication}/>
+            
         </div>
     )
 }

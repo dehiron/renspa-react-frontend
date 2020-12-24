@@ -37,11 +37,25 @@
   }
 }
 
-/* .calender{
-  width: 90%;
-  max-width: 100%;
-  background: black;
-  border: 1px solid lightblue;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.500em;
-} */
+.container{
+  display: inline-block;
+  /* border: solid 5px black; */
+  margin : 5px;
+  padding : 5px;
+  width : 100vw
+}
+
+.oneProperty{
+  display: inline-block;
+  /* flex-direction: column-reverse; */
+  justify-content: space-between;
+  border: solid 1px lightblue;
+  margin : 5px;
+  padding : 20px
+}
+
+.header_img{
+  width: 450px;
+  height: 300px;
+}
+

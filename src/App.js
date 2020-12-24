@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
+import Schedule from './components/Schedule';
 import axios from 'axios'
 
 
@@ -35,17 +36,23 @@ function App() {
         <Switch>
           {/* <Route exact path={"/"} component={Home} /> */}
           <Route
-          exact path={'/'}
-          render= {props => (
-            <Home {...props} handleLogin = {handleLogin} loggedInStatus = {loggedInStatus} />
-          )}
+            exact path={'/'}
+            render= {props => (
+              <Home {...props} handleLogin = {handleLogin} loggedInStatus = {loggedInStatus} />
+            )}
           />
           {/* <Route exact path={"/"} component={Dashboard} /> */}
           <Route
-          exact path={'/dashboard'}
-          render= {props => (
-            <Dashboard { ...props } loggedInStatus = {loggedInStatus} />
-          )}
+            exact path={'/dashboard'}
+            render= {props => (
+              <Dashboard { ...props } loggedInStatus = {loggedInStatus} user = {user}/>
+            )}
+          />
+          <Route
+            exact path={'/schedule'}
+            render= {props => (
+              <Schedule { ...props } user = {user}/>
+            )}
           />
         </Switch>
       </BrowserRouter>

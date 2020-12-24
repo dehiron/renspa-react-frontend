@@ -1,14 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Route} from "react";
 import '../App.css';
-import Calendar from 'react-calendar';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
-
+import Schedule from './Schedule';
 
 function Dashboard(props) {
 
   const [owners, setOwners] = useState([])
   const [properties, setProperties] = useState([])
   const [posts, setPosts] = useState([])
+  
+  const initialDate = new Date()
+  const [startDate, setStartDate] = useState(initialDate)
+  const handleChange = (date) => {
+    setStartDate(date)
+  }
 
   async function getData(){
 
@@ -30,6 +37,10 @@ function Dashboard(props) {
     .then(response => setPosts(response));
   }
 
+  const handleClick = () =>{
+    props.history.push('/schedule');
+  }
+
   useEffect(()=>{
     getData()
   },[]);
@@ -39,20 +50,29 @@ function Dashboard(props) {
       <h1>始めよう！</h1>
       {/* <h2>ログイン状態: {props.loggedInStatus}</h2> */}
       <header className="Dashboard-header">
-        {/* <ul type="square">
-          {owners.map((owner) => <li key={owner.id}>{owner.name} : {owner.email}</li>)}
-        </ul> */}
-        <ul type="square">
+        <div className="container">
           {properties.map((property) => 
-            <li key={property.id}>
-              {property.type} : {property.address_full} : 
-                <img src={property.header_img} alt=" " width="20%"></img>
-                <Calendar className="calender" />
-            </li>)}
-        </ul>
-        <ul type="square">
-          {posts.map((post) => <li key={post.id}>{post.title} : {post.content}</li>)}
-        </ul>
+            <div className="oneProperty">
+              <div className="header_img_container">
+                <img className="header_img" src={property.header_img} alt=" " width="20%"></img>
+              </div>
+              <div className="text">
+                <h3>{property.type}</h3>
+                <h3>{property.address_full}</h3>
+                <h3>{property.description}</h3>
+                <h3>￥{property.price} / 1時間</h3>
+              </div>
+              <div>
+                {/* <DatePicker
+                    selected={startDate}
+                    onChange={handleChange}/> */}
+                <button
+                  onClick={handleClick}>
+                  いますぐ予約する
+                  </button>
+              </div>
+            </div>)}
+        </div>  
       </header>
     </div>
   );
