@@ -33,7 +33,7 @@ function Login(props) {
 
     return (
         <div>
-            <p>ログイン</p>
+            <h3>ログイン</h3>
 
             <form onSubmit={handleSubmit}>
                 <input

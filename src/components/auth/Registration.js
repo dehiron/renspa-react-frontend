@@ -34,7 +34,7 @@ function Registration(props) {
 
     return (
         <div>
-            <p>新規登録</p>
+            <h3>新規登録</h3>
 
             <form onSubmit={handleSubmit}>
                 <input

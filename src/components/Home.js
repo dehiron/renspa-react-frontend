@@ -15,7 +15,7 @@ function Home(props){
             <h1>RenSpa</h1>
             {/* <h2>ログイン状態: {props.loggedInStatus}</h2> */}
             <Login handleSuccessfulAuthentication={handleSuccessfulAuthentication}/>
-            <h3>または</h3>
+            <h5>または</h5>
             <Registration handleSuccessfulAuthentication={handleSuccessfulAuthentication}/>
             
         </div>

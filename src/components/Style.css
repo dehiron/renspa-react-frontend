@@ -8,6 +8,121 @@
 
 }
 
+.bg {
+    position: relative;
+    }
+
+.main-page-title{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    width:700px;
+    line-height: 55px;
+    color: #fff;
+    background: #000;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-page-subtitle{
+    font-family:fantasy;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    width:700px;
+    line-height: 55px;
+    color: #fff;
+    background: #000;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.user-icon{
+    position: absolute;
+    top: 50%;
+    left: 37.5%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:10;
+    width:300px;
+    height: 330px;
+    border: double 2px lightblue;
+    border-radius: 10px
+}
+
+.userhome-button{
+    position: absolute;
+    top: 80%;
+    left: 37.5%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:10;
+    height:50px;
+    width:300px;
+    background-color: white;
+    color: black;
+    border: double 2px lightblue;
+    border-radius: 10px;
+
+}
+
+.owner-icon{
+    position: absolute;
+    top: 50%;
+    left: 62.5%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:10;
+    width:300px;
+    height: 330px;
+    border: double 2px lightgreen;
+    border-radius: 10px
+}
+
+.ownerhome-button{
+    position: absolute;
+    top: 80%;
+    left: 62.5%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:10;
+    height:50px;
+    width:300px;
+    background-color: white;
+    color: black;
+    border: double 2px lightgreen;
+    border-radius: 10px
+
+}
+
+
+.main-page-img{
+    width:100vw;
+    height:100vh;
+    opacity: 0.45;
+}
+
+
+
 .title{
     height:50px;
     background-color:white
@@ -15,6 +130,32 @@
 
 .title_message{
     text-align: center;
+}
+
+
+.back-to-home{
+    float: right;
+    padding: 2px 2px;
+    text-decoration: none;
+    color: #FFF;
+    background: #03A9F4;/*色*/
+    border: solid 1px #0f9ada;/*線色*/
+    border-radius: 2px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.back-to-home2{
+    padding: 2px 2px;
+    text-decoration: none;
+    color: #FFF;
+    background: rgb(235, 99, 99);/*色*/
+    border: solid 1px rgb(236, 111, 111);/*線色*/
+    border-radius: 2px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    width:40px;
+    height:30px;
 }
 
 .calendar {
@@ -221,4 +362,10 @@ background: #fffbef;
 	left: 0;
 	pointer-events: none;
 	opacity: 0.5;
+}
+
+.ownerhome{
+    display:block;
+    margin:auto;
+    text-align: center;
 }
