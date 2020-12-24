@@ -11,11 +11,12 @@ function Home(props){
     }
 
     return (
-        <div>
-            <h1>Home</h1>
+        <div className = "home-main">
+            <h1>RenSpa</h1>
             {/* <h2>ログイン状態: {props.loggedInStatus}</h2> */}
-            <Registration handleSuccessfulAuthentication={handleSuccessfulAuthentication}/>
             <Login handleSuccessfulAuthentication={handleSuccessfulAuthentication}/>
+            <h3>または</h3>
+            <Registration handleSuccessfulAuthentication={handleSuccessfulAuthentication}/>
             
         </div>
     )

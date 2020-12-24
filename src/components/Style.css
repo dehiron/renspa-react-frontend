@@ -8,7 +8,6 @@
 
 }
 
-
 .title{
     height:50px;
     background-color:white
@@ -22,6 +21,63 @@
     text-align: center;
     padding-bottom: 20px;
 }
+
+.home-main{
+    display: block;
+    border:rgba(0, 0, 0, 0.3) solid 10px;
+    text-align: center;
+    width: 1000px;
+    margin:40px auto;
+    padding: 50px
+
+}
+
+
+.registration-form{
+    display:block;
+    height: 30px;
+    width: 300px;
+    margin: 5px auto;
+    border-radius: 3px;
+}
+
+.registration-submit-button{
+    display:block;
+    height:40px;
+    width: 300px;
+    margin: 5px auto;
+    background-color:  rgb(65, 221, 65) ;
+    color: whitesmoke;
+    border-style: double;
+    border-radius: 3px;
+}
+
+.login-form{
+    display:block;
+    height: 30px;
+    width: 300px;
+    margin: 5px auto;
+    border-radius: 3px;
+}
+
+.login-submit-button{
+    display:block;
+    height:40px;
+    width: 300px;
+    margin: 5px auto;
+    background-color: rgb(60, 105, 228);
+    color: whitesmoke;
+    border-style: double;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
 .btn-flat-double-border {
     display: block;
     padding: 0.5em 1em;

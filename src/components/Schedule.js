@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 import DatePicker, { registerLocale } from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import './Style.css'
+import axios from 'axios'
 
 
-function Schedule() {
+function Schedule(props) {
 
     const initialDate = new Date();
     const [startDate, setStartDate] = useState(new Date());
@@ -14,10 +15,34 @@ function Schedule() {
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
     const [numOfPeople, setNumOfPeople] = useState(""); 
+    const [test, setTest] = useState("")
+
+
+    let data = JSON.stringify({
+        reservation: {
+            name: name,
+            email: email,
+            startDate: startDate.toString().substring(0,15),
+            time: time,
+            numOfPeople: numOfPeople,
+        }
+    })
+
+    const handleSubmit = () => {
+        axios.post("http://localhost:5000/send_mail",
+            data,
+            {headers:{"Content-Type" : "application/json"}},
+            { withCredentials: true }
+        ).then(props.history.push('/checkout'))
+         .catch(error => {
+            console.log("registration error", error)
+        })
+    }
+
 
     return (
       <div className="ui container" id="container">
-        <div className="Search__Form">
+        <form className="Search__Form" onSubmit={handleSubmit}>
 
         {/* タイトル */}
         <div className="title">
@@ -84,10 +109,13 @@ function Schedule() {
 
 
         <div>
-            <a href="#" class="btn-flat-double-border">予約を確定する</a>
+            <button 
+                href="#" 
+                class="btn-flat-double-border" 
+            >予約を確定する</button>
         </div>
           
-        </div>
+        </form>
       </div>
     );
 

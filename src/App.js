@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 import Home from './components/Home';
 import Dashboard from './components/Dashboard';
 import Schedule from './components/Schedule';
+import Checkout from './components/Checkout';
 import axios from 'axios'
-
 
 function App() {
 
@@ -52,6 +52,12 @@ function App() {
             exact path={'/schedule'}
             render= {props => (
               <Schedule { ...props } user = {user}/>
+            )}
+          />
+          <Route
+            exact path={'/checkout'}
+            render= {props => (
+              <Checkout { ...props }/>
             )}
           />
         </Switch>

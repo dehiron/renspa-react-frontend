@@ -37,6 +37,7 @@ function Login(props) {
 
             <form onSubmit={handleSubmit}>
                 <input
+                    className = "login-form"
                     type="email"
                     name="email"
                     placeholder="メールアドレス"
@@ -44,13 +45,14 @@ function Login(props) {
                     onChange={e => setEmail(e.target.value)}
                 />
                 <input
+                    className = "login-form"
                     type="password"
                     name="password"
                     placeholder="パスワード"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
-                <button type="submit">ログイン</button>
+                <button className = "login-submit-button" type="submit">ログイン</button>
             </form>
         </div>
     )

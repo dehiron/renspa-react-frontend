@@ -38,6 +38,7 @@ function Registration(props) {
 
             <form onSubmit={handleSubmit}>
                 <input
+                    className = "registration-form"
                     type="email"
                     name="email"
                     placeholder="メールアドレス"
@@ -45,6 +46,7 @@ function Registration(props) {
                     onChange={e => setEmail(e.target.value)}
                 />
                 <input
+                    className = "registration-form"
                     type="password"
                     name="password"
                     placeholder="パスワード"
@@ -52,13 +54,14 @@ function Registration(props) {
                     onChange={e => setPassword(e.target.value)}
                 />
                 <input
+                    className = "registration-form"
                     type="password"
                     name="passwordConfirmation"
                     placeholder="確認用パスワード"
                     value={passwordConfirmation}
                     onChange={e => setPasswordConfirmation(e.target.value)}
                 />
-                <button type="submit">登録</button>
+                <button className = "registration-submit-button" type="submit">登録</button>
             </form>
         </div>
     )
