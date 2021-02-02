@@ -64,7 +64,7 @@
 
 .userhome-button{
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 37.5%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
@@ -96,7 +96,7 @@
 
 .ownerhome-button{
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 62.5%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
