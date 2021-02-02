@@ -16,7 +16,7 @@ function Login(props) {
             }
         })
 
-        axios.post("http://localhost:5000/login",
+        axios.post("https://renspa-rails-backend.herokuapp.com/login",
             data,
             {headers:{"Content-Type" : "application/json"}},
             { withCredentials: true }

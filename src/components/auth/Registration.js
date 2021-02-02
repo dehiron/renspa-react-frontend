@@ -18,7 +18,7 @@ function Registration(props) {
             }
         })
 
-        axios.post("http://localhost:5000/signup",
+        axios.post("https://renspa-rails-backend.herokuapp.com/signup",
             data,
             {headers:{"Content-Type" : "application/json"}},
             { withCredentials: true }
