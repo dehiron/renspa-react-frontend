@@ -55,7 +55,7 @@ function Schedule(props) {
         </div>
 
         {/* メール */}
-        <div class="cp_iptxt">
+        <div className="cp_iptxt">
             <input type="text" placeholder="E-Mail" onChange={e => setEmail(e.target.value)}/>
         </div>
 
