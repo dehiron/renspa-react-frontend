@@ -29,6 +29,7 @@ function Schedule(props) {
     })
 
     const handleSubmit = () => {
+        // axios.post("http://localhost:5000/send_mail",
         axios.post("https://renspa-rails-backend.herokuapp.com/send_mail",
             data,
             {headers:{"Content-Type" : "application/json"}},
