@@ -1,6 +1,6 @@
 #container{
     border: lightblue solid 4px;
-    width: 40%;
+    width: 80vw;
     margin: auto;
     margin-top: 20px;
     display : block;
@@ -160,6 +160,7 @@
 .calendar {
     text-align: center;
     padding-bottom: 20px;
+
 }
 
 .home-main{
